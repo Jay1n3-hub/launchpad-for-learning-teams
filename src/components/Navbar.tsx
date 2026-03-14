@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import logo from "@/assets/launchpad-logo.png";
+import logo from "@/assets/boardly-logo.png";
 import { motion, AnimatePresence } from "framer-motion";
 
 const Navbar = () => {
