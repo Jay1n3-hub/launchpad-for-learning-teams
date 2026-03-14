@@ -5,7 +5,7 @@ const Footer = () => (
     <div className="container mx-auto px-6">
       <div className="flex flex-col items-center gap-8 md:flex-row md:justify-between">
         <div className="flex items-center gap-2">
-          <Rocket className="h-4 w-4 text-primary" strokeWidth={1.5} />
+          <img src={logo} alt="LaunchPad" className="h-6 w-6" />
           <span className="text-sm font-semibold text-foreground">LaunchPad</span>
         </div>
 
