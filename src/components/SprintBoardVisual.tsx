@@ -32,7 +32,7 @@ const SprintBoardVisual = () => (
   <div className="rounded-xl border border-border bg-card p-4 glow-border">
     <div className="mb-3 flex items-center justify-between">
       <span className="text-xs font-medium text-muted-foreground">Sprint 3 — Week of Mar 10</span>
-      <span className="text-xs font-mono text-primary">launchpad/board</span>
+      <span className="text-xs font-mono text-primary">boardly/sprint</span>
     </div>
     <div className="grid grid-cols-4 gap-2">
       {columns.map((col) => (

@@ -10,10 +10,10 @@ const AboutSection = () => (
         className="mx-auto max-w-2xl text-center"
       >
         <h2 className="text-3xl font-semibold text-foreground sm:text-4xl">
-          About LaunchPad
+          About Boardly
         </h2>
         <p className="mt-6 text-muted-foreground leading-relaxed">
-          LaunchPad was built to support internship programs, junior developer teams, organizations adopting Agile, and mentorship-driven development teams. We believe new teams deserve tools designed for their reality — not tools built for senior engineers with a decade of experience.
+          Boardly was built to support internship programs, junior developer teams, organizations adopting Agile, and mentorship-driven development teams. We believe new teams deserve tools designed for their reality — not tools built for senior engineers with a decade of experience.
         </p>
         <blockquote className="mt-8 border-l-2 border-primary pl-4 text-left text-lg font-medium text-foreground/90 italic">
           "Helping new teams launch into Agile with structure, guidance, and transparency."
