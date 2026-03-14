@@ -1,4 +1,4 @@
-import { Rocket } from "lucide-react";
+import logo from "@/assets/launchpad-logo.png";
 
 const Footer = () => (
   <footer className="border-t border-border py-12">

@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { Rocket, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import logo from "@/assets/launchpad-logo.png";
 import { motion, AnimatePresence } from "framer-motion";
 
 const Navbar = () => {
