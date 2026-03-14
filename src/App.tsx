@@ -31,8 +31,8 @@ function ProtectedRoutes() {
   if (roles.length === 0) return <PendingApprovalPage />;
 
   return (
-    <AppLayout>
-      <Routes>
+    <Routes>
+      <Route element={<AppLayout />}>
         <Route index element={<DashboardPage />} />
         <Route path="projects" element={<PlaceholderPage title="Projects" />} />
         <Route path="kanban" element={<PlaceholderPage title="Kanban Board" />} />
@@ -46,8 +46,8 @@ function ProtectedRoutes() {
         <Route path="profile" element={<PlaceholderPage title="Profile" />} />
         <Route path="admin/users" element={<PlaceholderPage title="User Management" />} />
         <Route path="*" element={<Navigate to="/dashboard" replace />} />
-      </Routes>
-    </AppLayout>
+      </Route>
+    </Routes>
   );
 }
 
