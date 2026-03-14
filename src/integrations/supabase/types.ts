@@ -14,16 +14,141 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      organizations: {
+        Row: {
+          code: string
+          created_at: string
+          id: string
+          name: string
+        }
+        Insert: {
+          code: string
+          created_at?: string
+          id?: string
+          name: string
+        }
+        Update: {
+          code?: string
+          created_at?: string
+          id?: string
+          name?: string
+        }
+        Relationships: []
+      }
+      profiles: {
+        Row: {
+          active_days: number
+          avatar_url: string | null
+          contract_end_date: string | null
+          contract_start_date: string | null
+          created_at: string
+          email: string
+          id: string
+          leave_end: string | null
+          leave_start: string | null
+          name: string
+          org_id: string | null
+          prompt_enabled: boolean
+          status: string
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          active_days?: number
+          avatar_url?: string | null
+          contract_end_date?: string | null
+          contract_start_date?: string | null
+          created_at?: string
+          email?: string
+          id?: string
+          leave_end?: string | null
+          leave_start?: string | null
+          name?: string
+          org_id?: string | null
+          prompt_enabled?: boolean
+          status?: string
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          active_days?: number
+          avatar_url?: string | null
+          contract_end_date?: string | null
+          contract_start_date?: string | null
+          created_at?: string
+          email?: string
+          id?: string
+          leave_end?: string | null
+          leave_start?: string | null
+          name?: string
+          org_id?: string | null
+          prompt_enabled?: boolean
+          status?: string
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "profiles_org_id_fkey"
+            columns: ["org_id"]
+            isOneToOne: false
+            referencedRelation: "organizations"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      user_roles: {
+        Row: {
+          id: string
+          role: Database["public"]["Enums"]["app_role"]
+          user_id: string
+        }
+        Insert: {
+          id?: string
+          role: Database["public"]["Enums"]["app_role"]
+          user_id: string
+        }
+        Update: {
+          id?: string
+          role?: Database["public"]["Enums"]["app_role"]
+          user_id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      generate_org_code: { Args: never; Returns: string }
+      get_org_by_code: {
+        Args: { _code: string }
+        Returns: {
+          id: string
+          name: string
+        }[]
+      }
+      has_role: {
+        Args: {
+          _role: Database["public"]["Enums"]["app_role"]
+          _user_id: string
+        }
+        Returns: boolean
+      }
     }
     Enums: {
-      [_ in never]: never
+      app_role:
+        | "intern"
+        | "dev"
+        | "ba"
+        | "mentor"
+        | "scrum_master"
+        | "product_owner"
+        | "pm"
+        | "admin"
+        | "ceo"
+        | "solutions_architect"
+        | "designer"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -150,6 +275,20 @@ export type CompositeTypes<
 
 export const Constants = {
   public: {
-    Enums: {},
+    Enums: {
+      app_role: [
+        "intern",
+        "dev",
+        "ba",
+        "mentor",
+        "scrum_master",
+        "product_owner",
+        "pm",
+        "admin",
+        "ceo",
+        "solutions_architect",
+        "designer",
+      ],
+    },
   },
 } as const
