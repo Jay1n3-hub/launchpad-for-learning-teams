@@ -29,7 +29,7 @@ const Footer = () => (
       </div>
 
       <div className="mt-8 text-center text-xs text-muted-foreground">
-        © {new Date().getFullYear()} LaunchPad BMS. All rights reserved.
+        © {new Date().getFullYear()} Boardly. All rights reserved.
       </div>
     </div>
   </footer>

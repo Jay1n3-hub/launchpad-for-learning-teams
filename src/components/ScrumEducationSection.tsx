@@ -14,7 +14,7 @@ const ScrumEducationSection = () => (
           Learn Scrum While You Work
         </h2>
         <p className="mx-auto mt-4 max-w-xl text-muted-foreground">
-          LaunchPad helps teams understand Scrum artifacts and ceremonies through guided workflows and embedded learning resources.
+          Boardly helps teams understand Scrum artifacts and ceremonies through guided workflows and embedded learning resources.
         </p>
       </motion.div>
 

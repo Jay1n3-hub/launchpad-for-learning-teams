@@ -53,7 +53,7 @@ const ScrumGapSection = () => (
           transition={{ duration: 0.5, delay: 0.2 }}
           className="rounded-xl border border-primary/30 bg-card p-8 glow-hover"
         >
-          <h3 className="text-lg font-semibold text-foreground">LaunchPad BMS</h3>
+          <h3 className="text-lg font-semibold text-foreground">Boardly</h3>
           <p className="mt-1 text-xs text-primary">Built for learning teams</p>
           <ul className="mt-6 space-y-3">
             {[

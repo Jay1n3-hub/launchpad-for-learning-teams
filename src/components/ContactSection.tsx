@@ -25,7 +25,7 @@ const ContactSection = () => {
             Contact
           </h2>
           <p className="mt-4 text-center text-muted-foreground">
-            Questions or feedback? Reach out to the LaunchPad team.
+            Questions or feedback? Reach out to the Boardly team.
           </p>
 
           <form onSubmit={handleSubmit} className="mt-10 space-y-4">

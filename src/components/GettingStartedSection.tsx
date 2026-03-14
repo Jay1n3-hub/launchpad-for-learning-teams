@@ -37,7 +37,7 @@ const GettingStartedSection = () => (
           Start Your Organization in Minutes
         </h2>
         <p className="mx-auto mt-4 max-w-xl text-muted-foreground">
-          LaunchPad uses organization-based onboarding. Create your workspace, invite your team, and start managing work.
+          Boardly uses organization-based onboarding. Create your workspace, invite your team, and start managing work.
         </p>
       </motion.div>
 

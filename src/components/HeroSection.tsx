@@ -20,10 +20,10 @@ const HeroSection = () => {
               Launch Your Teams Beyond Traditional Scrum.
             </h1>
             <p className="mt-6 max-w-lg text-lg leading-relaxed text-muted-foreground">
-              LaunchPad is a board management system designed to support Agile workflows and learning-focused teams — internship programs, junior developer teams, and mentorship-based organizations.
+              Boardly is a board management system designed to support Agile workflows and learning-focused teams — internship programs, junior developer teams, and mentorship-based organizations.
             </p>
             <p className="mt-3 text-sm text-muted-foreground/70">
-              Most Scrum tools focus only on delivery. LaunchPad supports delivery <em>and</em> learning.
+              Most Scrum tools focus only on delivery. Boardly supports delivery <em>and</em> learning.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a

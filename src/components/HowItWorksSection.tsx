@@ -17,7 +17,7 @@ const HowItWorksSection = () => (
         viewport={{ once: true }}
         className="text-center text-3xl font-semibold text-foreground sm:text-4xl"
       >
-        How LaunchPad Works
+        How Boardly Works
       </motion.h2>
 
       <div className="relative mx-auto mt-16 max-w-md">
