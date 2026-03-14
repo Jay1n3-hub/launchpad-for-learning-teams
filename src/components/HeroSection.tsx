@@ -27,7 +27,7 @@ const HeroSection = () => {
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a
-                href="#get-started"
+                href="/auth"
                 className="h-11 px-6 inline-flex items-center gap-2 rounded-md bg-primary text-primary-foreground text-sm font-medium brand-transition hover:brightness-110 active-press"
               >
                 Get Started

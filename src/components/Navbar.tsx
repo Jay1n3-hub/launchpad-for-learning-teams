@@ -35,13 +35,13 @@ const Navbar = () => {
 
         <div className="hidden items-center gap-3 md:flex">
           <a
-            href="#login"
+            href="/auth"
             className="h-9 px-4 inline-flex items-center rounded-md text-sm font-medium text-muted-foreground brand-transition hover:text-foreground"
           >
             Login
           </a>
           <a
-            href="#get-started"
+            href="/auth"
             className="h-9 px-5 inline-flex items-center rounded-md bg-primary text-primary-foreground text-sm font-medium brand-transition hover:brightness-110 active-press"
           >
             Get Started
@@ -78,11 +78,11 @@ const Navbar = () => {
               </a>
             ))}
             <div className="mt-4 flex flex-col gap-2">
-              <a href="#login" className="text-sm text-muted-foreground hover:text-foreground py-2">
+              <a href="/auth" className="text-sm text-muted-foreground hover:text-foreground py-2">
                 Login
               </a>
               <a
-                href="#get-started"
+                href="/auth"
                 className="h-9 px-5 inline-flex items-center justify-center rounded-md bg-primary text-primary-foreground text-sm font-medium"
               >
                 Get Started
