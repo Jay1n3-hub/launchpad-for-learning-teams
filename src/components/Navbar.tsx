@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { Rocket, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import logo from "@/assets/launchpad-logo.png";
 import { motion, AnimatePresence } from "framer-motion";
 
 const Navbar = () => {
@@ -15,8 +16,7 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 h-14 border-b border-foreground/10 bg-background/80 backdrop-blur-md">
       <div className="container mx-auto flex h-full items-center justify-between px-6">
         <a href="#" className="flex items-center gap-2">
-          <Rocket className="h-5 w-5 text-primary" strokeWidth={1.5} />
-          <span className="text-lg font-semibold tracking-tight text-foreground">LaunchPad</span>
+          <img src={logo} alt="LaunchPad" className="h-7 w-7" />
         </a>
 
         {/* Desktop */}
