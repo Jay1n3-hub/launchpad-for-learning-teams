@@ -1,4 +1,4 @@
-import logo from "@/assets/launchpad-logo.png";
+import logo from "@/assets/boardly-logo.png";
 
 const Footer = () => (
   <footer className="border-t border-border py-12">
