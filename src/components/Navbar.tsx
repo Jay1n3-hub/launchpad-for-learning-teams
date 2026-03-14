@@ -35,13 +35,13 @@ const Navbar = () => {
 
         <div className="hidden items-center gap-3 md:flex">
           <a
-            href="#login"
+            href="/auth"
             className="h-9 px-4 inline-flex items-center rounded-md text-sm font-medium text-muted-foreground brand-transition hover:text-foreground"
           >
             Login
           </a>
           <a
-            href="#get-started"
+            href="/auth"
             className="h-9 px-5 inline-flex items-center rounded-md bg-primary text-primary-foreground text-sm font-medium brand-transition hover:brightness-110 active-press"
           >
             Get Started
