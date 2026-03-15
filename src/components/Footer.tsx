@@ -12,9 +12,10 @@ const Footer = () => (
         <nav className="flex flex-wrap items-center gap-6">
           {[
             { label: "About", href: "#about" },
+            { label: "Ceremonies", href: "#ceremonies" },
             { label: "Artifacts", href: "#artifacts" },
             { label: "Contact", href: "#contact" },
-            { label: "Login", href: "#login" },
+            { label: "Login", href: "/auth" },
             { label: "Create Organization", href: "#get-started" },
           ].map((l) => (
             <a

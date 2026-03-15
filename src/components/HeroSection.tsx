@@ -34,10 +34,10 @@ const HeroSection = () => {
                 <ArrowRight className="h-4 w-4" strokeWidth={1.5} />
               </a>
               <a
-                href="#artifacts"
+                href="#ceremonies"
                 className="h-11 px-6 inline-flex items-center gap-2 rounded-md border border-border text-sm font-medium text-foreground brand-transition glow-hover active-press"
               >
-                View Scrum Artifacts
+                Explore Scrum Guide
                 <ExternalLink className="h-4 w-4" strokeWidth={1.5} />
               </a>
             </div>
