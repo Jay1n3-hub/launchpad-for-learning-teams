@@ -29,7 +29,7 @@ const ScrumGapSection = () => (
           className="rounded-xl border border-border bg-card p-8 opacity-60"
         >
           <h3 className="text-lg font-semibold text-foreground">Traditional Scrum Platforms</h3>
-          <p className="mt-1 text-xs text-muted-foreground">Tools like Jira, Trello, and similar</p>
+          <p className="mt-1 text-xs text-muted-foreground">Conventional project management tools</p>
           <ul className="mt-6 space-y-3">
             {[
               "Assume experienced, self-organizing teams",
