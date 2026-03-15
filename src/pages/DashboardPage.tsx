@@ -1,40 +1,50 @@
 import { useAuth } from "@/contexts/AuthContext";
-import { LayoutDashboard } from "lucide-react";
+import { useDashboardData } from "@/hooks/useDashboardData";
+import StatsCards from "@/components/dashboard/StatsCards";
+import AttendanceClock from "@/components/dashboard/AttendanceClock";
+import ActivityFeed from "@/components/dashboard/ActivityFeed";
+import TeamOverview from "@/components/dashboard/TeamOverview";
 
 export default function DashboardPage() {
   const { profile, roles } = useAuth();
+  const { stats, activities, todayAttendance, setTodayAttendance, loading, elevated } = useDashboardData();
 
   const roleLabel = roles.length > 0
     ? roles.map(r => r.replace(/_/g, " ")).join(", ")
     : "No role assigned";
 
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center py-20">
+        <div className="h-8 w-8 animate-spin rounded-full border-2 border-primary border-t-transparent" />
+      </div>
+    );
+  }
+
   return (
     <div className="space-y-6">
+      {/* Header */}
       <div>
         <h1 className="text-2xl font-semibold text-foreground">Dashboard</h1>
         <p className="text-sm text-muted-foreground">
-          Welcome back, {profile?.name || "User"}
+          Welcome back, {profile?.name || "User"}{" "}
+          <span className="capitalize text-primary/80">({roleLabel})</span>
         </p>
       </div>
 
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        <div className="rounded-xl border border-border bg-card p-6">
-          <div className="flex items-center gap-3">
-            <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10">
-              <LayoutDashboard className="h-5 w-5 text-primary" />
-            </div>
-            <div>
-              <p className="text-sm font-medium text-foreground">Your Role</p>
-              <p className="text-xs capitalize text-muted-foreground">{roleLabel}</p>
-            </div>
-          </div>
-        </div>
-      </div>
+      {/* Stats */}
+      <StatsCards stats={stats} elevated={elevated} />
 
-      <div className="rounded-xl border border-border bg-card p-8 text-center">
-        <p className="text-muted-foreground">
-          More dashboard features coming in Phase 2 — task stats, activity feed, and attendance tracking.
-        </p>
+      {/* Main Content Grid */}
+      <div className={`grid gap-6 ${elevated ? "lg:grid-cols-3" : "lg:grid-cols-2"}`}>
+        {/* Attendance Clock */}
+        <AttendanceClock todayAttendance={todayAttendance} setTodayAttendance={setTodayAttendance} />
+
+        {/* Activity Feed */}
+        <ActivityFeed activities={activities} />
+
+        {/* Team Overview - elevated roles only */}
+        {elevated && <TeamOverview />}
       </div>
     </div>
   );
