@@ -109,14 +109,14 @@ const ScrumEducationSection = () => {
                 </div>
                 <h3 className="mt-4 text-base font-semibold text-foreground">{item.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{item.desc}</p>
-                {"link" in item && item.link && (
+                {"link" in item && (item as any).link && (
                   <a
-                    href={item.link.href}
+                    href={(item as any).link.href}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:underline"
                   >
-                    {item.link.label}
+                    {(item as any).link.label}
                     <ArrowUpRight className="h-3.5 w-3.5" strokeWidth={1.5} />
                   </a>
                 )}
