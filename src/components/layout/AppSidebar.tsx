@@ -28,8 +28,8 @@ interface NavItem {
 
 const navItems: NavItem[] = [
   { icon: LayoutDashboard, label: "Dashboard", path: "/dashboard" },
-  { icon: FolderKanban, label: "Projects", path: "/projects" },
-  { icon: Columns3, label: "Board", path: "/kanban" },
+  { icon: FolderKanban, label: "Projects", path: "/dashboard/projects" },
+  { icon: Columns3, label: "Board", path: "/dashboard/kanban" },
   { icon: Users, label: "Teams", path: "/team" },
   { icon: BarChart3, label: "Analytics", path: "/analytics" },
   {

@@ -36,8 +36,8 @@ function ProtectedRoutes() {
     <Routes>
       <Route element={<AppLayout />}>
         <Route index element={<DashboardPage />} />
-        <Route path="projects" element={<PlaceholderPage title="Projects" />} />
-        <Route path="kanban" element={<PlaceholderPage title="Kanban Board" />} />
+        <Route path="projects" element={<ProjectsPage />} />
+        <Route path="kanban" element={<KanbanPage />} />
         <Route path="team" element={<PlaceholderPage title="Team" />} />
         <Route path="analytics" element={<PlaceholderPage title="Analytics" />} />
         <Route path="reports" element={<PlaceholderPage title="Reports" />} />
