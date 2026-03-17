@@ -217,6 +217,59 @@ export type Database = {
           },
         ]
       }
+      standup_reports: {
+        Row: {
+          accomplishments: string | null
+          blockers: string | null
+          created_at: string
+          id: string
+          notes: string | null
+          org_id: string
+          report_date: string
+          report_type: string
+          today: string | null
+          updated_at: string
+          user_id: string
+          yesterday: string | null
+        }
+        Insert: {
+          accomplishments?: string | null
+          blockers?: string | null
+          created_at?: string
+          id?: string
+          notes?: string | null
+          org_id: string
+          report_date?: string
+          report_type?: string
+          today?: string | null
+          updated_at?: string
+          user_id: string
+          yesterday?: string | null
+        }
+        Update: {
+          accomplishments?: string | null
+          blockers?: string | null
+          created_at?: string
+          id?: string
+          notes?: string | null
+          org_id?: string
+          report_date?: string
+          report_type?: string
+          today?: string | null
+          updated_at?: string
+          user_id?: string
+          yesterday?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "standup_reports_org_id_fkey"
+            columns: ["org_id"]
+            isOneToOne: false
+            referencedRelation: "organizations"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       tasks: {
         Row: {
           assigned_to: string | null

@@ -35,8 +35,8 @@ const navItems: NavItem[] = [
   {
     icon: FileText, label: "Reports", path: "/reports",
     children: [
-      { icon: FileText, label: "Standup & EOD", path: "/reports/standup-eod" },
-      { icon: FileText, label: "Attendance", path: "/reports/attendance" },
+      { icon: FileText, label: "Standup & EOD", path: "/dashboard/reports/standup-eod" },
+      { icon: FileText, label: "Attendance", path: "/dashboard/reports/attendance" },
     ],
   },
   { icon: Bell, label: "Notifications", path: "/notifications" },
