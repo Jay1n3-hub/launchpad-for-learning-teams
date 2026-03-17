@@ -14,6 +14,8 @@ import DashboardPage from "./pages/DashboardPage";
 import KanbanPage from "./pages/KanbanPage";
 import ProjectsPage from "./pages/ProjectsPage";
 import UserManagementPage from "./pages/UserManagementPage";
+import StandupEodPage from "./pages/StandupEodPage";
+import AttendanceReportPage from "./pages/AttendanceReportPage";
 
 const queryClient = new QueryClient();
 
