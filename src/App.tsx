@@ -44,8 +44,8 @@ function ProtectedRoutes() {
         <Route path="team" element={<PlaceholderPage title="Team" />} />
         <Route path="analytics" element={<PlaceholderPage title="Analytics" />} />
         <Route path="reports" element={<PlaceholderPage title="Reports" />} />
-        <Route path="reports/standup-eod" element={<PlaceholderPage title="Standup & EOD" />} />
-        <Route path="reports/attendance" element={<PlaceholderPage title="Attendance" />} />
+        <Route path="reports/standup-eod" element={<StandupEodPage />} />
+        <Route path="reports/attendance" element={<AttendanceReportPage />} />
         <Route path="notifications" element={<PlaceholderPage title="Notifications" />} />
         <Route path="settings" element={<PlaceholderPage title="Settings" />} />
         <Route path="profile" element={<PlaceholderPage title="Profile" />} />
