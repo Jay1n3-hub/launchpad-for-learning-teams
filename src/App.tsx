@@ -13,6 +13,7 @@ import PendingApprovalPage from "./pages/PendingApprovalPage";
 import DashboardPage from "./pages/DashboardPage";
 import KanbanPage from "./pages/KanbanPage";
 import ProjectsPage from "./pages/ProjectsPage";
+import UserManagementPage from "./pages/UserManagementPage";
 
 const queryClient = new QueryClient();
 
@@ -46,7 +47,7 @@ function ProtectedRoutes() {
         <Route path="notifications" element={<PlaceholderPage title="Notifications" />} />
         <Route path="settings" element={<PlaceholderPage title="Settings" />} />
         <Route path="profile" element={<PlaceholderPage title="Profile" />} />
-        <Route path="admin/users" element={<PlaceholderPage title="User Management" />} />
+        <Route path="admin/users" element={<UserManagementPage />} />
         <Route path="*" element={<Navigate to="/dashboard" replace />} />
       </Route>
     </Routes>

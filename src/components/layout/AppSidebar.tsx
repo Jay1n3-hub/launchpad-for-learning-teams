@@ -52,7 +52,7 @@ export default function AppSidebar() {
 
   const allNavItems = [
     ...navItems,
-    ...(isAdmin ? [{ icon: ShieldCheck, label: "User Management", path: "/admin/users" }] : []),
+    ...(isAdmin ? [{ icon: ShieldCheck, label: "User Management", path: "/dashboard/admin/users" }] : []),
     { icon: Settings, label: "Settings", path: "/settings" },
   ];
 
